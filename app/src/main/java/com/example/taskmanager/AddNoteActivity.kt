@@ -17,7 +17,7 @@ class AddNoteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddNoteBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_add_note)
+        setContentView(binding.root)
 
         db = NoteDatabaseHelper(this )
 
@@ -27,7 +27,7 @@ class AddNoteActivity : AppCompatActivity() {
             val note = Note(0,title,content)
             db.insertNote(note)
             finish()
-            Toast.makeText(this,"Note Saved",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Date Saved",Toast.LENGTH_SHORT).show()
 
         }
 
